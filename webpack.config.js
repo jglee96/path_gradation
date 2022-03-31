@@ -18,4 +18,7 @@ module.exports = {
     filename: "main.js",
     path: path.resolve(__dirname, "out"),
   },
+  devServer: {
+    port: 5000,
+  },
 };
