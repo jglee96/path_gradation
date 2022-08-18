@@ -31,13 +31,25 @@ if (heartPathItem.className === 'Path') {
     shape.lineTo(center);
     shape.closePath();
     pathDataArr.push(
-      <path d={shape.pathData} fill={`url(#linearGradient${i})`} stroke={`url(#linearGradient${i})`} strokeWidth="1" />,
+      <path
+        d={shape.pathData}
+        fill={`url(#linearGradient${i})`}
+        stroke={`url(#linearGradient${i})`}
+        strokeWidth="1"
+      />,
     );
 
     const cp = p1.add(p2).divide(2);
 
     gradArr.push(
-      <linearGradient id={`linearGradient${i}`} x1={cp.x} y1={cp.y} x2={center.x} y2={center.y} gradientUnits="userSpaceOnUse">
+      <linearGradient
+        id={`linearGradient${i}`}
+        x1={cp.x}
+        y1={cp.y}
+        x2={center.x}
+        y2={center.y}
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset="5%" stopColor="gold" />
         <stop offset="50%" stopColor="blue" />
         <stop offset="100%" stopColor="red" />
